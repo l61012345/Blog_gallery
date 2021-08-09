@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const imageSize = require('image-size');
  
-const rootPath="/Images/" // 照片的路径
+const rootPath="Images/" // 照片的路径
  
 class PhotoExtension {
     constructor() {
@@ -31,8 +31,8 @@ function createPlotIconsData() {
     let allPlots = [];
     let allPlotGroups = [];
  
-    const plotJsonFile = path.join(__dirname, '../gallery/photosInfo.json'); // 生成文件的路径
-    const plotGroupJsonFile = path.join(__dirname, '../gallery/photos.json'); // 生成文件的路径
+    const plotJsonFile = path.join(__dirname, '../photosInfo.json'); // 生成文件的路径
+    const plotGroupJsonFile = path.join(__dirname, '../photos.json'); // 生成文件的路径
  
     if (fs.existsSync(plotJsonFile)) {
         allPlots = JSON.parse(fs.readFileSync(plotJsonFile));
